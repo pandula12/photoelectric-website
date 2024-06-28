@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="banner">
+  <img src="assets/img/banner1.jpg" alt="Banner Image">
+  <div class="banner-overlay">
+    <div class="banner-text">Photoelectric Energy</div>
+  </div>
+</div>
+<div class="text-container">
+  <div class="welcome-msg">
+    <h2 class="section-heading">Welcome</h2>
+    <p>We are dedicated to providing the best solar energy solutions for your needs. Discover the benefits of going solar with us.</p>
+  </div>
+  <div class="section">
+    <h2 class="section-heading">Our Offers</h2>
+    <div class="slideshow-container">
+      <div *ngFor="let slide of slides; let i = index" class="mySlides" [ngClass]="{'active': i === currentSlideIndex}">
+        <img [src]="slide.image" class="slide-image" alt="Product Image">
+      </div>
+      <!-- Next and previous buttons -->
+      <a class="prev" (click)="changeSlide(-1)">&#10094;</a>
+      <a class="next" (click)="changeSlide(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span *ngFor="let slide of slides; let i = index" class="dot" [ngClass]="{'active': i === currentSlideIndex}" (click)="setSlide(i)"></span>
+    </div>
+  </div>
+</div>

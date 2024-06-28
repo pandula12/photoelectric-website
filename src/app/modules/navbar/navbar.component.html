@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="assets/img/logo.jpg" alt="Logo" (click)="navigateHome()">
+  </div>
+  <div class="menu-icon" (click)="toggleMenu()">
+    <span class="material-icons">menu</span>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/solar-panels" routerLinkActive="active-link" (click)="closeMenu()">Solar Panels</a></li>
+    <li><a routerLink="/inverters" routerLinkActive="active-link" (click)="closeMenu()">Inverters</a></li>
+    <li><a routerLink="/batteries" routerLinkActive="active-link" (click)="closeMenu()">Batteries</a></li>
+    <li><a routerLink="/about" routerLinkActive="active-link" (click)="closeMenu()">About Us</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active-link" (click)="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+<div class="mobile-nav-links" [class.open]="menuOpen">
+  <ul>
+    <li><a routerLink="/solar-panels" routerLinkActive="active-link" (click)="closeMenu()">Solar Panels</a></li>
+    <li><a routerLink="/inverters" routerLinkActive="active-link" (click)="closeMenu()">Inverters</a></li>
+    <li><a routerLink="/batteries" routerLinkActive="active-link" (click)="closeMenu()">Batteries</a></li>
+    <li><a routerLink="/about" routerLinkActive="active-link" (click)="closeMenu()">About Us</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active-link" (click)="closeMenu()">Contact</a></li>
+  </ul>
+</div>
